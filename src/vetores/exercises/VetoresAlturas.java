@@ -7,7 +7,12 @@ import java.util.Scanner;
 import vetores.entities.Pessoa;
 
 public class VetoresAlturas {
-
+	/*
+	 * Fazer um programa para ler nome, idade e altura de N pessoas, conforme
+	 * exemplo. Depois, mostrar na tela a altura média das pessoas, e mostrar também
+	 * a porcentagem de pessoas com menos de 16 anos, bem como os nomes dessas
+	 * pessoas caso houver.
+	 */
 	public static void main(String[] args) {
 
 		Locale.setDefault(Locale.US);
@@ -35,23 +40,24 @@ public class VetoresAlturas {
 		double sum = 0.0;
 
 		for (int i = 0; i < pessoa.length; i++) {
-			sum += pessoa[i].getAltura();			
-			if (pessoa[i].getIdade() < 16) {				
+			sum += pessoa[i].getAltura();
+			if (pessoa[i].getIdade() < 16) {
 				countMenosDezesseis++;
 			}
-		}	
+		}
 
 		double media = sum / pessoa.length;
 		System.out.printf("%nAltura media: %.2f%n", media);
-		
+
 		percentMenosDezesseis = (countMenosDezesseis * 100.00 / pessoa.length);
 		DecimalFormat df = new DecimalFormat("###,#0.0");
-		
+
 		System.out.println("Pessoas com menos de 16 anos: " + df.format(percentMenosDezesseis) + "%");
-		
+
 		for (int i = 0; i < pessoa.length; i++) {
 			if (pessoa[i].getIdade() < 16) {
-				System.out.println(pessoa[i].getNome());;
+				System.out.println(pessoa[i].getNome());
+
 			}
 		}
 
