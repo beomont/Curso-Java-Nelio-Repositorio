@@ -1,0 +1,7 @@
+/target/*
+target/*
+target/classes/application.properties
+.DS_Store
+.classpath
+.project
+.settings/*
